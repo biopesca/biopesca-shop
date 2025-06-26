@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "prodotti"
+    label: "Prodotti"
+    folder: "prodotti"
+    create: true
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Descrizione", name: "body", widget: "markdown" }
+      - { label: "Immagine", name: "image", widget: "image" }
+      - { label: "Prezzo", name: "prezzo", widget: "string" }
+
+  - name: "promo"
+    label: "Promo"
+    folder: "promo"
+    create: true
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Dettagli", name: "body", widget: "markdown" }
+      - { label: "Validità", name: "validita", widget: "string" }
